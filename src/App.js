@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import Form from './Form'
-import formSchema from ''
+import User from './User'
+import formSchema from './formSchema'
 import axios from 'axios'
 import * as Yup from 'yup'
 
@@ -20,10 +21,10 @@ const initialFormErrors = {
   spiritAnimal: '',
 }
 const initialUsers = []
-const initialDisabled = true
+const initialDisabled = false
 
-export default function App() {
-  const [users, setUsers] = useState(initialUsers)
+function App() {
+  const [users, setUsers] = useState([])
   const [formValues, setFormValues ] = useState(initialFormValues)
   const [formErrors, setFormErrors] = useState(initialFormErrors)
   const [disabled, setDisabled] = useState(initialDisabled)
@@ -111,7 +112,6 @@ export default function App() {
 
   return (
     <div className="App">
-      <header><h1>User Onboarding App</h1></header>
       
         <Form 
           values={formValues}
@@ -120,7 +120,10 @@ export default function App() {
           onSubmit={onSubmit}
           disabled={disabled}
           errors={formErrors}
-      />
+        />
+
     </div>
   );
 }
+
+export default App

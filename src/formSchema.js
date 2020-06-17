@@ -16,9 +16,6 @@ const formSchema = Yup.object().shape({
     spiritAnimal: Yup
     .string()
     .required("Must include spirit animal"),
-    tos: Yup
-    .string()
-    .oneOf(["Yes", "No"], "Please agree to our BA t.o.s., por favor"),
 })
 
 export default formSchema
