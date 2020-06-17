@@ -32,7 +32,8 @@ function App() {
   const getUsers = () => {
     axios.get('https://reqres.in/api/users')
     .then(response => {
-      setUsers(response.data)
+      setUsers(response.data.data)
+      console.log(response.data)
     })
     .catch(err => {
       debugger
@@ -121,6 +122,14 @@ function App() {
           disabled={disabled}
           errors={formErrors}
         />
+
+        {
+          users.map(user => {
+            return (
+              <User key={user.id} details={user} />
+            )
+          })
+        }
 
     </div>
   );
