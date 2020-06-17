@@ -7,7 +7,8 @@ import axios from 'axios'
 import * as Yup from 'yup'
 
 const initialFormValues = {
-  name: '',
+  first_name: '',
+  last_name: '',
   email: '',
   password:'',
   spiritAnimal: '',
@@ -15,7 +16,8 @@ const initialFormValues = {
 }
 
 const initialFormErrors = {
-  name: '',
+  first_name: '',
+  last_name: '',
   email: '',
   password:'',
   spiritAnimal: '',
@@ -91,7 +93,8 @@ function App() {
     evt.preventDefault()
 
     const newUser = {
-      name: formValues.name.trim(),
+      first_name: formValues.first_name.trim(),
+      last_name: formValues.last_name.trim(),
       email: formValues.email.trim(),
       password: formValues.password.trim(),
       spiritAnimal: formValues.spiritAnimal.trim(),

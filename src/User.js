@@ -7,11 +7,11 @@ function User({ details }) {
   
     return (
       <div>
-        <h2>{details.name}</h2>
+        <h2>{details.first_name} {details.last_name}</h2>
+        <p>User ID: {details.id}</p>
         <p>Email: {details.email}</p>
-        <p>Password: {details.password}</p>
-        <p>Role: {details.spiritAnimal}</p>
-      </div>
+        <p>Spirit Animal: {details.spiritAnimal}</p>
+        </div>
     )
   }
   

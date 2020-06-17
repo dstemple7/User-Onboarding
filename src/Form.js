@@ -18,7 +18,8 @@ export default function Form (props) {
           <button disabled={disabled}>submit</button>
 
           <div>
-              <div>{errors.name}</div>
+              <div>{errors.first_name}</div>
+              <div>{errors.last_name}</div>
               <div>{errors.email}</div>
               <div>{errors.password}</div>
               <div>{errors.spiritAnimal}</div>
@@ -29,11 +30,23 @@ export default function Form (props) {
       <div>
         <h4>General Information</h4>
 
-        <label>Name&nbsp;
+        <label>First Name&nbsp;
             <input 
-                value={values.name}
+                value={values.first_name}
                 onChange={onInputChange}
-                name='name'
+                name='first_name'
+                type='text'
+            />
+        </label>
+        
+        <br></br>
+        <br></br>
+
+        <label>Last Name&nbsp;
+            <input 
+                value={values.last_name}
+                onChange={onInputChange}
+                name='last_name'
                 type='text'
             />
         </label>
