@@ -37,6 +37,9 @@ export default function Form (props) {
                 type='text'
             />
         </label>
+        
+        <br></br>
+        <br></br>
 
         <label>Email&nbsp;
             <input 
@@ -47,6 +50,9 @@ export default function Form (props) {
             />
         </label>
 
+        <br></br>
+        <br></br>
+
         <label>Password&nbsp;
             <input 
                 value={values.password}
@@ -56,6 +62,9 @@ export default function Form (props) {
             />
         </label>
 
+        <br></br>
+        <br></br>
+
         <label>Spirit Animal&nbsp;
             <input 
                 value={values.spiritAnimal}
@@ -64,6 +73,9 @@ export default function Form (props) {
                 type='text'
             />
         </label>
+
+        <br></br>
+        <br></br>
 
         <label>I Agree to the Legalese BS&nbsp;
             <input 
